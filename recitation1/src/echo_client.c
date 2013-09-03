@@ -19,6 +19,7 @@
 #include <netdb.h>
 #include <netinet/in.h>
 #include <netinet/ip.h>
+#include <errno.h>
 
 #define ECHO_PORT 9999
 #define BUF_SIZE 4096
@@ -27,7 +28,7 @@ int main(int argc, char* argv[])
 {
     if (argc != 3)
     {
-        fprintf(stderr, "usage: %s <server-ip> <port>",argv[0]);
+        fprintf(stderr, "usage: %s <server-ip> <port>\n",argv[0]);
         return EXIT_FAILURE;
     }
 
@@ -35,8 +36,9 @@ int main(int argc, char* argv[])
         
     int status, sock;
     struct addrinfo hints;
+	memset(&hints, 0, sizeof(struct addrinfo));
     struct addrinfo *servinfo; //will point to the results
-    hints.ai_family = AF_UNSPEC;  //don't care IPv4 or IPv6
+    hints.ai_family = AF_INET; // IPv4
     hints.ai_socktype = SOCK_STREAM; //TCP stream sockets
     hints.ai_flags = AI_PASSIVE; //fill in my IP for me
 
@@ -54,7 +56,7 @@ int main(int argc, char* argv[])
     
     if (connect (sock, servinfo->ai_addr, servinfo->ai_addrlen) == -1)
     {
-        fprintf(stderr, "Connect");
+        fprintf(stderr, "Error connecting: %s\n", strerror(errno));
         return EXIT_FAILURE;
     }
         
