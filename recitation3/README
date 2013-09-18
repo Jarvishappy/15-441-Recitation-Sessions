@@ -1,7 +1,7 @@
 ################################################################################
 # README                                                                       #
 #                                                                              #
-# Description: This file serves as a README and documentation for Recitaion 2. #
+# Description: This file serves as a README and documentation for Recitaion 3. #
 #                                                                              #
 # Authors: Athula Balachandran <abalacha@cs.cmu.edu>,                          #
 #          Wolf Richter <wolf@cs.cmu.edu>                                      #
@@ -24,11 +24,11 @@
 [DES-2] Description of Files
 --------------------------------------------------------------------------------
 
-Here is a listing of all files associated with Recitation 1 and what their'
+Here is a listing of all files associated with Recitation 3 and what their'
 purpose is:
 
                     .../README                  - Current document 
-                    .../recitation2.pdf         - Provided slides/reference
+                    .../recitation3.pdf         - Provided slides/reference
                     .../src/echo_client.c       - Copied from recitation1
                     .../src/echo_server.c       - Copied from recitation1
                     .../src/Makefile            - Updated from recitation1

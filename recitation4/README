@@ -27,12 +27,16 @@
 Here is a listing of all files associated with Recitation 4 and what their
 purpose is:
 
-                    .../README                  - Current document 
-                    .../recitation4.pdf         - Provided slides/reference
-                    .../src/quicksort.py        - Quicksort example code
-                    .../src/webapp.py           - Webapp example code
-                    .../src/recitation4.odp     - OpenOffice recitation4 source
-                    .../src/wiki_quick.png      - Quicksort Wikipedia Screen
+                    .../README                     - Current document 
+                    .../recitation4-matt.pdf       - Provided slides/references
+                                                     from Matt
+                    .../recitation4-david.pdf      - Provided slides/references
+                                                     from David
+                    .../src/recitation4-matt.odp   - OpenOffice recitation4
+                                                     source from Matt
+                    .../src/recitation4-david.odp  - OpenOffice recitation4
+                                                     source from David
+                    .../src/liso_prototype.py      - Prototype Liso Web Server
 
 
 
@@ -40,15 +44,12 @@ purpose is:
 [RUN-3] How to Run
 --------------------------------------------------------------------------------
 
-You may directly execute the Python scripts.  When running webapp.py, it will
-start a web server running locally.  You need to first install Flask.  You can
-do this by using Python's 'easy_install flask'.  Go to this URL to see results:
+You should be able to just run the liso_prototype.py file directly, it has no
+external dependencies.
 
-                    http://localhost:5000
+It will start a web server on port 8080 and serves out of the hard-coded folder
+in the configuration section at the top of the source code.
 
-It defaults to port 5000.
-
-For trying out the quicksort.py script, you may also just run it directly.  You
-can see the doctest module in action with this command:
-
-                    python quicksort.py -v
+It does not implement all of the functionality needed for the first project.  It
+is meant to serve as an example of how responses are formed from Liso and to be
+a testbed to observe request/response flows.

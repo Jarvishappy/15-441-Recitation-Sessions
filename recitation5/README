@@ -24,19 +24,15 @@
 [DES-2] Description of Files
 --------------------------------------------------------------------------------
 
-Here is a listing of all files associated with Recitation 4 and what their
+Here is a listing of all files associated with Recitation 5 and what their
 purpose is:
 
-                    .../README                     - Current document 
-                    .../recitation5-athula.pdf     - Provided slides/references
-                                                     from Athula
-                    .../recitation5-wolf.pdf       - Provided slides/references
-                                                     from wolf
-                    .../src/recitation5-athula.odp - OpenOffice recitation5
-                                                     source from Athula
-                    .../src/recitation5-wolf.odp   - OpenOffice recitation5
-                                                     source from Wolf
-                    .../src/liso_prototype.py      - Prototype Liso Web Server
+                    .../README                  - Current document 
+                    .../recitation5.pdf         - Provided slides/reference
+                    .../src/quicksort.py        - Quicksort example code
+                    .../src/webapp.py           - Webapp example code
+                    .../src/recitation5.odp     - OpenOffice recitation4 source
+                    .../src/wiki_quick.png      - Quicksort Wikipedia Screen
 
 
 
@@ -44,12 +40,15 @@ purpose is:
 [RUN-3] How to Run
 --------------------------------------------------------------------------------
 
-You should be able to just run the liso_prototype.py file directly, it has no
-external dependencies.
+You may directly execute the Python scripts.  When running webapp.py, it will
+start a web server running locally.  You need to first install Flask.  You can
+do this by using Python's 'easy_install flask'.  Go to this URL to see results:
 
-It will start a web server on port 8080 and serves out of the hard-coded folder
-in the configuration section at the top of the source code.
+                    http://localhost:5000
 
-It does not implement all of the functionality needed for the first project.  It
-is meant to serve as an example of how responses are formed from Liso and to be
-a testbed to observe request/response flows.
+It defaults to port 5000.
+
+For trying out the quicksort.py script, you may also just run it directly.  You
+can see the doctest module in action with this command:
+
+                    python quicksort.py -v
